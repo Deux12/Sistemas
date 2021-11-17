@@ -1,0 +1,77 @@
+Crea un fichero llamado prueba, que contenga el listado largo del directorio "/home".
+	
+	
+	
+Visualiza el número de inode del fichero prueba.
+	
+	
+	
+Crea un enlace al fichero creado en el paso a) que se llame enlace_prueba.
+	
+	
+	
+Visualiza el número de inode del fichero enlace_prueba.
+	
+	
+	
+Visualiza el contenido del fichero enlace_prueba.
+	
+	
+	
+Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
+	
+	
+	
+Cuenta el número de líneas del fichero prueba que contengan el signo de subrayado.
+	
+	
+	
+Crea un fichero filtro1 con las líneas del fichero prueba que contengan el carácter :  seguido de cualquier carácter y a continuación un dígito del 0 al 3.
+	
+	
+	
+Crea un fichero filtro2 con las líneas del fichero prueba que terminen por algún dígito.
+	
+	
+	
+Cambia de modo simbólico los permisos del fichero prueba de forma que se le dé permiso de ejecución al propietario, permiso de lectura y escritura al grupo, y se le quite el permiso de lectura al resto de usuarios.
+	
+	
+	
+Crea un directorio.
+	
+	
+	
+Crea un fichero dentro del directorio creado cuyo contenido sean las 7 últimas líneas del fichero prueba.
+	
+	
+	
+Muestra por pantalla, de las 12 últimas líneas del fichero prueba, el número de líneas, palabras y bytes que tienen dichas líneas.
+	
+	
+	
+Cambia de modo absoluto los permisos al fichero prueba para que queden:-wxrwx--x
+	
+	
+	
+Cambia la máscara para crear los siguientes permisos por defecto: ficheros -->-w-r--rw- directorios -->-w-r-xrwx
+	
+	
+	
+Elimina el fichero prueba.
+	
+	
+	
+Visualiza el contenido del fichero enlace_prueba.
+	
+	
+	
+Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
+	
+	
+	
+Elimina el fichero enlace_prueba.
+	
+	
+	
+Repite el paso 18).
