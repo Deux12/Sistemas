@@ -1,77 +1,80 @@
-Crea un fichero llamado prueba, que contenga el listado largo del directorio "/home".
+1. Crea un fichero llamado prueba, que contenga el listado largo del directorio "/home".
+	
+ivan@ivan-VirtualBox:~$ vi prueba
+ivan@ivan-VirtualBox:~$ ls -Rl /home/ > prueba 
+	
+2. Visualiza el número de inode del fichero prueba.
+	
+ivan@ivan-VirtualBox:~$ ls -li prueba 
+	
+3. Crea un enlace al fichero creado en el paso a) que se llame enlace_prueba.
+	
+ivan@ivan-VirtualBox:~$ ln -s prueba /home/ivan/enlace_prueba
+
+4. Visualiza el número de inode del fichero enlace_prueba.
+	
+ivan@ivan-VirtualBox:~$ ls -li enlace_prueba 
+177617 lrwxrwxrwx 1 ivan ivan 6 nov 17 11:35 enlace_prueba -> prueba
+
+	
+5. Visualiza el contenido del fichero enlace_prueba.
+	
+ivan@ivan-VirtualBox:~$ vi enlace_prueba 
+	
+6. Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
 	
 	
 	
-Visualiza el número de inode del fichero prueba.
+7. Cuenta el número de líneas del fichero prueba que contengan el signo de subrayado.
 	
 	
 	
-Crea un enlace al fichero creado en el paso a) que se llame enlace_prueba.
+8. Crea un fichero filtro1 con las líneas del fichero prueba que contengan el carácter :  seguido de cualquier carácter y a continuación un dígito del 0 al 3.
 	
 	
 	
-Visualiza el número de inode del fichero enlace_prueba.
+9. Crea un fichero filtro2 con las líneas del fichero prueba que terminen por algún dígito.
 	
 	
 	
-Visualiza el contenido del fichero enlace_prueba.
+10. Cambia de modo simbólico los permisos del fichero prueba de forma que se le dé permiso de ejecución al propietario, permiso de lectura y escritura al grupo, y se le quite el permiso de lectura al resto de usuarios.
 	
 	
 	
-Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
+11. Crea un directorio.
 	
 	
 	
-Cuenta el número de líneas del fichero prueba que contengan el signo de subrayado.
+12. Crea un fichero dentro del directorio creado cuyo contenido sean las 7 últimas líneas del fichero prueba.
 	
 	
 	
-Crea un fichero filtro1 con las líneas del fichero prueba que contengan el carácter :  seguido de cualquier carácter y a continuación un dígito del 0 al 3.
+13. Muestra por pantalla, de las 12 últimas líneas del fichero prueba, el número de líneas, palabras y bytes que tienen dichas líneas.
 	
 	
 	
-Crea un fichero filtro2 con las líneas del fichero prueba que terminen por algún dígito.
+14. Cambia de modo absoluto los permisos al fichero prueba para que queden:-wxrwx--x
 	
 	
 	
-Cambia de modo simbólico los permisos del fichero prueba de forma que se le dé permiso de ejecución al propietario, permiso de lectura y escritura al grupo, y se le quite el permiso de lectura al resto de usuarios.
+15. Cambia la máscara para crear los siguientes permisos por defecto: ficheros -->-w-r--rw- directorios -->-w-r-xrwx
 	
 	
 	
-Crea un directorio.
+16. Elimina el fichero prueba.
 	
 	
 	
-Crea un fichero dentro del directorio creado cuyo contenido sean las 7 últimas líneas del fichero prueba.
+17. Visualiza el contenido del fichero enlace_prueba.
 	
 	
 	
-Muestra por pantalla, de las 12 últimas líneas del fichero prueba, el número de líneas, palabras y bytes que tienen dichas líneas.
+18. Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
 	
 	
 	
-Cambia de modo absoluto los permisos al fichero prueba para que queden:-wxrwx--x
+19. Elimina el fichero enlace_prueba.
 	
 	
 	
-Cambia la máscara para crear los siguientes permisos por defecto: ficheros -->-w-r--rw- directorios -->-w-r-xrwx
-	
-	
-	
-Elimina el fichero prueba.
-	
-	
-	
-Visualiza el contenido del fichero enlace_prueba.
-	
-	
-	
-Realiza un listado largo del directorio de trabajo actual y comprueba la información que proporciona de los ficheros prueba y enlace_prueba.
-	
-	
-	
-Elimina el fichero enlace_prueba.
-	
-	
-	
-Repite el paso 18).
+20. Repite el paso 18).
