@@ -1,0 +1,37 @@
+1. Control de Procesos
+1.Teniendo en cuenta la salida que te genera el comando ps lx | more responde a las siguientes
+preguntas:
+1.1 ¿número de procesos creados para ejecutar el comando?
+Son 2: ps lx y more. Podemos entender que son 3, si contamos el bash
+0 1000 2730 2722 20 0 19512 5012 do_wai Ss pts/0 0:00 bash
+0 1000 2736 2730 20 0 20132 3264 - R+ pts/0 0:00 ps lx
+0 1000 2737 2730 20 0 17372 2436 wait_w S+ pts/0 0:00 more
+1.2 El padre de estos procesos es el bash, se puede comprobar porque su PPID es el mismo
+PID que el del proceso de padre (2730).
+2. Visualiza el subárbol de procesos que parte de tu proceso shell junto con el PID y la lista de
+argumentos que los ha originado.
+julius@julius-VirtualBox:~$ pstree -a 2977 // 2977 es el PID del bash
+bash
+└─pstree -a 2977
+Entiendo que los argumentos son pstree -a 2977
+3. Usando el comando htop realiza las siguientes acciones:
+julius@julius-VirtualBox:~$ htop
+• Ordena los procesos por la columna %CPU para comprobar los que consumen más CPU.
+Usando la tecla p ordena los procesos por consumo de CPU de mayor a menor si tenemos
+seleccionada la columna CPU%.
+• Añade una columna más con el PPID de los procesos a la información que muestra.
+Pulsando F2 entramos a la pestaña de display options, en Columns se selecciona en Avaliable
+Columns PPID y se selecciona donde desea visuaizarse. Se introduce q para salir.
+• Haz que la prioridad NICE del proceso que ejecuta el comando htop tenga el valor 10.
+julius@julius-VirtualBox:~$ nice -n 10 htop
+• Ordena los procesos de forma descendente teniendo en cuenta su PID
+Pulsando en la columna PID se puede cambiar el orden de la columna según su valor
+4. Copia el siguiente programa y ejecútalo de forma interactiva.
+#!/bin/bash
+min=1
+max=100000
+resultado=0
+for i in `seq $min $max`
+do
+resultado=$(expr $resultado + 1)
+done
